@@ -1,0 +1,18 @@
+
+******WORKING********
+
+@route   POST api/users/register
+@desc    Register user
+@access  Public(production)
+@require name, location , *contact, *password, *conformPassword , company , avatar(optional)
+
+
+@route   GET api/users/login/:phoneNumber#password**
+@desc    Login user
+@access  Public
+------------------------------------------------------------------------------------
+
+@route GET api/product/catagory/:name
+@desc get specific catagory
+@access Public
+

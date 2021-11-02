@@ -1,0 +1,50 @@
+__GET ROUTES__
+
+_PRODUCT_
+
+@route   GET api/product/all
+@desc    get all product from database
+@access  Public(development)
+
+@route   GET api/product/id/:id1&id2...
+@desc    get specific products from database
+@access  Public
+
+@route GET api/product/catagory/all
+@desc get all stored catagories
+@access Public
+
+_USER_
+
+@route   GET api/users/me/:userId
+@desc    Get particular registered user
+@access  Private
+
+
+@route   GET api/users/login/:phoneNumber#password
+@desc    Login user
+@access  Public
+
+
+
+__POST ROUTES__
+
+_PRODUCT_
+
+@route   POST api/product/sell
+@desc    sell your product
+@access  Private
+@require productImage, userId, catagory, price, quantity, name
+
+_USER_
+
+@route   POST api/users/register
+@desc    Register user
+@access  Public(production)
+@require name, location , contact, password,conformPassword , company , avatar(optional)
+
+
+
+
+
+
